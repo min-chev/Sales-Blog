@@ -1,0 +1,40 @@
+<main>
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal" th:action="@{/message/create}" method="POST">
+                <fieldset>
+                    <legend>Изпратете съобщение: </legend>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="message_title">Заглавие</label>
+                        <div class="col-sm-6 ">
+                            <input type="text" class="form-control" id="message_title" placeholder="Заглавие"
+                                   name="title"/>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="message_content">Съдържание</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" rows="6" id="message_content" name="content"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-4 control-label" for="phoneormail">Обратна връзка(Телефон/E-mail)</label>
+                        <div class="col-sm-6">
+                            <textarea class="form-control" rows="1" id="phoneormail" name="phoneormail"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-sm-4 col-sm-offset-4">
+                            <a class="btn btn-default" th:href="@{/}">Откажи</a>
+                            <input type="submit" class="btn btn-primary" value="Изпрати"/>
+                        </div>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>

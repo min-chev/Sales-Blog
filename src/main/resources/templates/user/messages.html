@@ -1,0 +1,25 @@
+<main>
+    <div class="container body-content span=8 offset=2">
+        <div class="well">
+            <form class="form-horizontal">
+                <fieldset>
+                    <h1>Съобщения: </h1>
+
+                    <th:block th:each="message : ${messages}">
+                        <div class="row-md-6">
+                            <message>
+                                <header>
+                                    <h4>Изпратено : <b th:text= "${message.timeStamp}"></b></h4>
+                                    <h6>От : <b th:text= "${message.phoneormail}"></b></h6>
+                                    <h3 th:text="${message.title}"></h3>
+                                </header>
+                                <div style="max-width:700px; word-wrap:break-word;"><p th:text="${message.content}"></p></div>
+                            </message>
+                        </div>
+                        <br/>
+                    </th:block>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</main>
